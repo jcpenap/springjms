@@ -15,6 +15,7 @@ public class MessageSender {
     private String queue;
 
     public void send(String message) {
+        System.out.println("Message Send: "+ message);
         jmsTemplate.convertAndSend(queue, message);
     }
 
